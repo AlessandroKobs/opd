@@ -5,18 +5,18 @@ global $config;
 global $db;
 
 $config = array();
-if(ENVIRONMENT == 'development') {
-	define("BASE_URL", "http://localhost/estoque/");
-	$config['dbname'] = 'estoque';
-	$config['host'] = 'localhost';
-	$config['dbuser'] = 'root';
-	$config['dbpass'] = 'root';
+if (ENVIRONMENT == 'development') {
+    define("BASE_URL", "http://localhost/opendiet/");
+    $config['dbname'] = 'opendiet';
+    $config['host'] = 'localhost';
+    $config['dbuser'] = 'root';
+    $config['dbpass'] = '';
 } else {
-	define("BASE_URL", "http://localhost/estoque/");
-	$config['dbname'] = 'nova_loja';
-	$config['host'] = 'localhost';
-	$config['dbuser'] = 'root';
-	$config['dbpass'] = 'root';
+    define("BASE_URL", "http://kobsdesenvolvimento.com.br/opendiet");
+    $config['dbname'] = 'kobsd710_opendiet';
+    $config['host'] = 'localhost';
+    $config['dbuser'] = 'kobsd710_opendie';
+    $config['dbpass'] = 'alf290191';
 }
 
 $db = new PDO("mysql:dbname=".$config['dbname'].";host=".$config['host'], $config['dbuser'], $config['dbpass']);

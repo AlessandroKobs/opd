@@ -39,6 +39,8 @@ class Core {
 			$currentAction = 'index';
 		}
 
+
+
 		call_user_func_array(array($c, $currentAction), $params);
 
 	}
